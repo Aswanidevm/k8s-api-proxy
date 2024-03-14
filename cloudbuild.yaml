@@ -10,4 +10,4 @@ steps:
       - '--project'
       - 'jmc-devsecops'  # Replace with your GCP project ID
       - '--command'
-      - 'echo hostname'
+      - 'hostname'
