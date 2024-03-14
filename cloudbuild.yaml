@@ -12,7 +12,12 @@ steps:
       - '--command'
       - 'hostname'
 steps:
-  - name: 'gcr.io/$PROJECT_ID/cloud-builders-helm'
-    args: ['search', 'prometheus']
+  - name: 'gcr.io/jmc-devsecops/cloud-builders-helm'
+    args:
+      - 'helm' 
+      - 'search'
+      - 'hub'
+      - 'prometheus'
+
 
 
