@@ -13,6 +13,6 @@ steps:
       - 'hostname'
 steps:
   - name: 'gcr.io/$PROJECT_ID/cloud-builders-helm'
-    args: ['upgrade', '--install', 'lynx', 'image', 'gcr.io/kubernetes-amit-test/github.com/0xvoila/apache/phoenix:$SHORT_SHA']
+    args: ['search', 'prometheus']
 
 
