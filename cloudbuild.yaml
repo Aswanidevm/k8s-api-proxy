@@ -11,4 +11,4 @@ steps:
       - 'jmc-devsecops'  # Replace with your GCP project ID
       - '--command'
       - 'hostname'
-      - 'helm version'
+      - 'helm search repo chart-name'
