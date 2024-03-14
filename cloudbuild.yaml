@@ -11,3 +11,4 @@ steps:
       - 'jmc-devsecops'  # Replace with your GCP project ID
       - '--command'
       - 'echo "Hello from Cloud Build!"'
+      
