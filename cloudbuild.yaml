@@ -12,13 +12,13 @@ steps:
       - '--command'
       - 'hostname'
 
-  - name: 'gcr.io/cloud-builders/helm'
-    args: ['repo', 'add', 'prometheus-community', 'https://prometheus-community.github.io/helm-charts']
-  - name: 'gcr.io/cloud-builders/helm'
-    args: ['repo', 'update']
-  - name: 'gcr.io/cloud-builders/helm'
-    args: ['install', 'prometheus', '--namespace', 'monitoring', '--wait', 'prometheus-community/prometheus', # Optional: Add custom values with `--set` flag
-           '--set', 'server.retention.days=30']
+  # - name: 'gcr.io/cloud-builders/helm'
+  #   args: ['repo', 'add', 'prometheus-community', 'https://prometheus-community.github.io/helm-charts']
+  # - name: 'gcr.io/cloud-builders/helm'
+  #   args: ['repo', 'update']
+  # - name: 'gcr.io/cloud-builders/helm'
+  #   args: ['install', 'prometheus', '--namespace', 'monitoring', '--wait', 'prometheus-community/prometheus', # Optional: Add custom values with `--set` flag
+  #          '--set', 'server.retention.days=30']
   # - name: 'gcr.io/jmc-devsecops/cloud-builders-helm'
   #   args:
   #     - 'helm' 
@@ -26,5 +26,9 @@ steps:
   #     - 'hub'
   #     - 'prometheus'
 
+# - name: 'ubuntu' 
+#   args: ['apt-get', 'update', '-y']
+# - name: 'ubuntu'
+#   args: ['apt', 'install', '-y', 'wget'] 
 
 
