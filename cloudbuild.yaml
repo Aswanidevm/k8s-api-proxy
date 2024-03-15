@@ -11,6 +11,10 @@ steps:
   #     - 'jmc-devsecops'  # Replace with your GCP project ID
   #     - '--command'
   #     - 'hostname'
+
+  - name: 'gcr.io/cloud-builders/gcloud' # Or another suitable image 
+    entrypoint: 'bash'
+    args: ['./connect.sh'] 
  
 
 
