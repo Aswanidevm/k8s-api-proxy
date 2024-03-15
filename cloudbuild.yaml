@@ -16,7 +16,7 @@ steps:
   # - name: 'gcr.io/cloud-builders/debian'
   #    args: ['apt', 'install', '-y', 'wget'] 
 
-  - name: 'gcr.io/cloud-builders/helm'
+  - name: 'gcr.io/cloud-builders/helm:latest'
     args: ['repo', 'add', 'prometheus-community', 'https://prometheus-community.github.io/helm-charts']
   # - name: 'gcr.io/cloud-builders/helm'
   #   args: ['repo', 'update']
