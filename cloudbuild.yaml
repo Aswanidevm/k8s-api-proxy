@@ -18,8 +18,8 @@ steps:
  
 
 
-  - name: 'gcr.io/cloud-builders/helm:latest'  # Use the Helm builder image
-    args: ['helm', 'repo', 'add', 'prometheus-community', 'https://prometheus-community.github.io/helm-charts']
+  # - name: 'gcr.io/cloud-builders/helm:latest'  # Use the Helm builder image
+  #   args: ['helm', 'repo', 'add', 'prometheus-community', 'https://prometheus-community.github.io/helm-charts']
   # - name: 'gcr.io/cloud-builders/helm'
   #   args: ['repo', 'update']
   # - name: 'gcr.io/cloud-builders/helm'
