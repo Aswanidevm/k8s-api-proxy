@@ -11,13 +11,13 @@ steps:
       - 'jmc-devsecops'  # Replace with your GCP project ID
       - '--command'
       - 'hostname'
-  - name: 'ubuntu' 
-     args: ['apt-get', 'update', '-y']
-  - name: 'ubuntu'
-     args: ['apt', 'install', '-y', 'wget'] 
+  # - name: 'gcr.io/cloud-builders/debian'
+  #    args: ['apt-get', 'update', '-y']
+  # - name: 'gcr.io/cloud-builders/debian'
+  #    args: ['apt', 'install', '-y', 'wget'] 
 
-  # - name: 'gcr.io/cloud-builders/helm'
-  #   args: ['repo', 'add', 'prometheus-community', 'https://prometheus-community.github.io/helm-charts']
+  - name: 'gcr.io/cloud-builders/helm'
+    args: ['repo', 'add', 'prometheus-community', 'https://prometheus-community.github.io/helm-charts']
   # - name: 'gcr.io/cloud-builders/helm'
   #   args: ['repo', 'update']
   # - name: 'gcr.io/cloud-builders/helm'
