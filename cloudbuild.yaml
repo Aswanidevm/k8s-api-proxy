@@ -14,9 +14,20 @@
 steps:
 # - name: 'debian:buster'  # Use a Debian image for package management
 #   args: ['bash', '-c', 'apt-get update && apt-get upgrade -y']  # Update package lists and upgrade
-steps:
+
 - name: 'debian:buster'  # Use a Debian image for package management (adjust for your OS)
   args: ['bash', '-c', 'apt-get update && apt-get install python3 -y']
+
+
+
+- name: 'gcr.io/cloud-builders/helm:latest'  # Use the Helm builder image
+  args: ['helm', 'repo', 'add', 'prometheus-community', 'https://prometheus-community.github.io/helm-charts']  # Add a Helm repository
+
+# ... (Other build steps)
+
+- name: 'gcr.io/cloud-builders/helm:latest'  # Use Helm again for deployment
+  args: ['helm', 'install', 'prometheus', 'prometheus-community/prometheus']  # Install a Helm chart
+
  
 
 
