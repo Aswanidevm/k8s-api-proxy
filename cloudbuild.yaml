@@ -12,8 +12,10 @@
   #     - '--command'
   #     - 'hostname'
 steps:
+# - name: 'debian:buster'  # Use a Debian image for package management
+#   args: ['bash', '-c', 'apt-get update && apt-get upgrade -y']  # Update package lists and upgrade
 - name: 'debian:buster'  # Use a Debian image for package management
-  args: ['bash', '-c', 'apt-get update && apt-get upgrade -y']  # Update package lists and upgrade
+  args: ['bash', '-c', 'apt-get install git']  # Update package lists and upgrade
  
 
 
