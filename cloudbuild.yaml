@@ -1,4 +1,4 @@
-steps:
+# steps:
   # # Step 1: SSH into the remote VM
   # - name: 'gcr.io/cloud-builders/gcloud'
   #   args:
@@ -11,10 +11,9 @@ steps:
   #     - 'jmc-devsecops'  # Replace with your GCP project ID
   #     - '--command'
   #     - 'hostname'
-
-  - name: 'gcr.io/cloud-builders/gcloud' # Or another suitable image 
-    entrypoint: 'bash'
-    args: ['./connect.sh'] 
+steps:
+- name: 'debian:buster'  # Use a Debian image for package management
+  args: ['bash', '-c', 'apt-get update && apt-get upgrade -y']  # Update package lists and upgrade
  
 
 
