@@ -25,7 +25,6 @@ steps:
   #     - 'search'
   #     - 'hub'
   #     - 'prometheus'
-
 - name: 'ubuntu' 
   args: ['apt-get', 'update', '-y']
 - name: 'ubuntu'
